@@ -7,7 +7,7 @@
 <style>
 :root{--bg:#0d1117;--sf:#161b22;--sf2:#1c2430;--bd:#30363d;--a:#58a6ff;--a2:#3fb950;--a3:#ff7b72;--a4:#d2a8ff;--a5:#ffa657;--tx:#e6edf3;--tm:#8b949e;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--tx);font-family:'Noto Sans TC',sans-serif;min-height:100vh;overflow-x:hidden;}
+body{background:var(--bg);color:var(--tx);font-family:'Noto Sans TC',sans-serif;font-size:17px;min-height:100vh;overflow-x:hidden;}
 /* OS MODAL */
 #os-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
 #os-modal{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:40px 32px;max-width:460px;width:100%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,.6);animation:popIn .4s cubic-bezier(.34,1.56,.64,1);}
@@ -30,23 +30,23 @@ body{background:var(--bg);color:var(--tx);font-family:'Noto Sans TC',sans-serif;
 .ot.on{background:var(--a);color:var(--bg);}
 .ot.mac-on{background:#888;color:var(--bg);}
 /* HERO */
-.hero{position:relative;padding:54px 20px 38px;text-align:center;overflow:hidden;}
+.hero{position:relative;padding:64px 24px 52px;text-align:center;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(88,166,255,.12) 0%,transparent 70%);pointer-events:none;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.3);border-radius:99px;padding:6px 16px;font-size:11px;color:var(--a);letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;animation:fd .5s ease both;}
-.hero h1{font-size:clamp(1.7rem,4.5vw,3rem);font-weight:900;line-height:1.15;letter-spacing:-.02em;animation:fd .5s .1s ease both;}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.15;letter-spacing:-.02em;animation:fd .5s .1s ease both;}
 .hero h1 span{color:var(--a);}
-.hero p{margin-top:12px;font-size:.95rem;color:var(--tm);max-width:500px;margin-inline:auto;animation:fd .5s .2s ease both;}
-.os-pill{display:inline-flex;align-items:center;gap:8px;background:var(--sf2);border:1px solid var(--bd);border-radius:99px;padding:5px 14px;font-size:12px;margin-top:14px;animation:fd .5s .3s ease both;}
+.hero p{margin-top:14px;font-size:1.05rem;color:var(--tm);max-width:500px;margin-inline:auto;animation:fd .5s .2s ease both;}
+.os-pill{display:inline-flex;align-items:center;gap:8px;background:var(--sf2);border:1px solid var(--bd);border-radius:99px;padding:6px 18px;font-size:14px;margin-top:16px;animation:fd .5s .3s ease both;}
 .os-pill strong{color:var(--a);}
 /* NAV */
-.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);padding:0 6px;}
-.nav-tabs{display:flex;gap:2px;max-width:1000px;margin:0 auto;overflow-x:auto;scrollbar-width:none;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd);padding:8px 6px 0;}
+.nav-tabs{display:flex;gap:4px;max-width:1080px;margin:0 auto;overflow-x:auto;scrollbar-width:none;justify-content:center;}
 .nav-tabs::-webkit-scrollbar{display:none;}
-.tab-btn{flex-shrink:0;display:flex;align-items:center;gap:5px;padding:12px 13px;background:none;border:none;border-bottom:2px solid transparent;color:var(--tm);font-family:'Noto Sans TC',sans-serif;font-size:12.5px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.tab-btn{flex-shrink:0;display:flex;align-items:center;gap:6px;padding:14px 18px;background:none;border:none;border-bottom:2px solid transparent;color:var(--tm);font-family:'Noto Sans TC',sans-serif;font-size:14.5px;cursor:pointer;transition:all .2s;white-space:nowrap;}
 .tab-btn:hover{color:var(--tx);}
 .tab-btn.active{color:var(--a);border-bottom-color:var(--a);}
 /* CONTENT */
-.content{max-width:960px;margin:0 auto;padding:34px 14px 80px;}
+.content{max-width:1020px;margin:0 auto;padding:38px 20px 90px;}
 .section{display:none;animation:fi .3s ease;}
 .section.active{display:block;}
 /* CARDS */
@@ -56,13 +56,13 @@ body{background:var(--bg);color:var(--tx);font-family:'Noto Sans TC',sans-serif;
 .card.p::before{background:linear-gradient(90deg,var(--a4),transparent);}
 .card.o::before{background:linear-gradient(90deg,var(--a5),transparent);}
 .card.r::before{background:linear-gradient(90deg,var(--a3),transparent);}
-.card-title{font-size:1rem;font-weight:700;margin-bottom:9px;display:flex;align-items:center;gap:9px;}
+.card-title{font-size:1.1rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:9px;}
 .sn{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--a);color:var(--bg);font-size:11px;font-weight:900;flex-shrink:0;}
 .sn.g{background:var(--a2);}.sn.o{background:var(--a5);}
-.card p{color:var(--tm);line-height:1.7;font-size:.9rem;}
+.card p{color:var(--tm);line-height:1.8;font-size:1rem;}
 .card p+p{margin-top:6px;}
 /* KEY TAG */
-.kt{display:inline-block;background:var(--sf2);border:1px solid var(--bd);border-radius:5px;padding:1px 8px;font-family:'JetBrains Mono',monospace;font-size:.82em;color:var(--a);box-shadow:0 2px 0 rgba(0,0,0,.5);}
+.kt{display:inline-block;background:var(--sf2);border:1px solid var(--bd);border-radius:5px;padding:2px 10px;font-family:'JetBrains Mono',monospace;font-size:.88em;color:var(--a);box-shadow:0 2px 0 rgba(0,0,0,.5);}
 /* BROWSER MOCKUP */
 .browser{background:#1a1e24;border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin:16px 0;box-shadow:0 8px 32px rgba(0,0,0,.4);}
 .browser-bar{background:#252b35;padding:8px 13px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--bd);}
@@ -101,13 +101,13 @@ table.nt td{padding:5px 8px;font-size:11px;border-bottom:1px solid rgba(255,255,
 .dtr.on{color:#fff;border-bottom-color:var(--a);}
 .db{padding:11px;max-height:175px;overflow-y:auto;}
 /* TIP BOX */
-.tip{display:flex;gap:10px;background:rgba(88,166,255,.07);border:1px solid rgba(88,166,255,.25);border-radius:10px;padding:13px;margin:13px 0;font-size:.86rem;line-height:1.6;color:var(--tx);}
+.tip{display:flex;gap:10px;background:rgba(88,166,255,.07);border:1px solid rgba(88,166,255,.25);border-radius:10px;padding:15px;margin:15px 0;font-size:1rem;line-height:1.6;color:var(--tx);}
 .tip.ok{background:rgba(63,185,80,.07);border-color:rgba(63,185,80,.25);}
 .tip.warn{background:rgba(255,166,87,.07);border-color:rgba(255,166,87,.25);}
 .tip.red{background:rgba(255,123,114,.07);border-color:rgba(255,123,114,.25);}
 .ti{font-size:16px;flex-shrink:0;margin-top:1px;}
 /* CODE BLOCK */
-.cb{background:#0d1117;border:1px solid var(--bd);border-radius:8px;padding:13px;margin:9px 0;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.7;overflow-x:auto;}
+.cb{background:#0d1117;border:1px solid var(--bd);border-radius:8px;padding:15px;margin:10px 0;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.75;overflow-x:auto;}
 .jk{color:var(--a4);}.js{color:var(--a2);}.jn{color:var(--a5);}.jb{color:var(--a);}
 /* SEC HEAD */
 .sh{display:flex;align-items:center;gap:13px;margin-bottom:24px;}
@@ -115,16 +115,16 @@ table.nt td{padding:5px 8px;font-size:11px;border-bottom:1px solid rgba(255,255,
 .si.bl{background:rgba(88,166,255,.15);}.si.gn{background:rgba(63,185,80,.15);}
 .si.pu{background:rgba(210,168,255,.15);}.si.or{background:rgba(255,166,87,.15);}
 .si.rd{background:rgba(255,123,114,.15);}
-.sh-text h2{font-size:1.35rem;font-weight:900;}
-.sh-text p{font-size:.87rem;color:var(--tm);margin-top:3px;}
+.sh-text h2{font-size:1.55rem;font-weight:900;}
+.sh-text p{font-size:1rem;color:var(--tm);margin-top:4px;}
 /* STEPS */
 .steps{display:flex;flex-direction:column;gap:0;position:relative;padding-left:32px;}
 .steps::before{content:'';position:absolute;left:11px;top:16px;bottom:16px;width:2px;background:var(--bd);}
 .step{position:relative;padding:0 0 20px 16px;}
 .sdot{position:absolute;left:-32px;top:0;width:24px;height:24px;border-radius:50%;background:var(--sf2);border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--a);z-index:1;}
 .sdot.dn{background:var(--a);border-color:var(--a);color:var(--bg);}
-.step h4{font-size:14px;font-weight:700;margin-bottom:4px;}
-.step p{font-size:12.5px;color:var(--tm);line-height:1.6;}
+.step h4{font-size:16px;font-weight:700;margin-bottom:5px;}
+.step p{font-size:14.5px;color:var(--tm);line-height:1.7;}
 /* THROTTLE GRID */
 .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:13px 0;}
 .tc{background:var(--sf2);border:2px solid var(--bd);border-radius:10px;padding:13px 9px;text-align:center;cursor:pointer;transition:all .2s;}
@@ -145,7 +145,7 @@ table.nt td{padding:5px 8px;font-size:11px;border-bottom:1px solid rgba(255,255,
 .badge.pu{background:rgba(210,168,255,.15);color:var(--a4);}
 .badge.rd{background:rgba(255,123,114,.15);color:var(--a3);}
 /* RUN BTN */
-.rb{display:inline-flex;align-items:center;gap:7px;background:var(--a);color:var(--bg);border:none;border-radius:8px;padding:9px 18px;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:13px;cursor:pointer;transition:all .2s;margin-top:14px;}
+.rb{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:var(--bg);border:none;border-radius:9px;padding:11px 22px;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:all .2s;margin-top:14px;}
 .rb:hover{background:#79bcff;transform:translateY(-1px);box-shadow:0 4px 14px rgba(88,166,255,.3);}
 .rb.gn{background:var(--a2);}
 .rb.gn:hover{background:#56d364;}
@@ -164,8 +164,8 @@ table.nt td{padding:5px 8px;font-size:11px;border-bottom:1px solid rgba(255,255,
 .pc.on{border-color:var(--a);box-shadow:0 0 0 2px rgba(88,166,255,.2);}
 .pc-head{padding:14px 14px 10px;display:flex;align-items:center;gap:10px;}
 .pcdot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
-.pc-name{font-weight:900;font-size:14px;}
-.pc-sub{font-size:11px;color:var(--tm);margin-top:2px;}
+.pc-name{font-weight:900;font-size:16px;}
+.pc-sub{font-size:13px;color:var(--tm);margin-top:2px;}
 .pc-mock{padding:0 12px 12px;}
 
 /* PANEL EXPAND (inline, full-grid-width) */
@@ -225,9 +225,9 @@ body.mac .mac-flex{display:flex;}
 
 /* QUIZ */
 .qcard{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:20px;margin-bottom:13px;}
-.qq{font-weight:700;margin-bottom:13px;line-height:1.5;font-size:14px;}
+.qq{font-weight:700;margin-bottom:15px;line-height:1.5;font-size:17px;}
 .qopts{display:flex;flex-direction:column;gap:8px;}
-.qo{background:var(--sf2);border:2px solid var(--bd);border-radius:8px;padding:10px 14px;cursor:pointer;transition:all .2s;font-size:13px;text-align:left;color:var(--tx);font-family:'Noto Sans TC',sans-serif;}
+.qo{background:var(--sf2);border:2px solid var(--bd);border-radius:10px;padding:13px 18px;cursor:pointer;transition:all .2s;font-size:15px;text-align:left;color:var(--tx);font-family:'Noto Sans TC',sans-serif;}
 .qo:hover{border-color:var(--a);background:rgba(88,166,255,.06);}
 .qo.correct{border-color:var(--a2);background:rgba(63,185,80,.1);color:var(--a2);}
 .qo.wrong{border-color:var(--a3);background:rgba(255,123,114,.1);color:var(--a3);}
@@ -291,9 +291,9 @@ body.mac .mac-flex{display:flex;}
 .nav-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px;margin:18px 0;}
 .ncard{background:var(--sf2);border:2px solid var(--bd);border-radius:12px;padding:16px 12px;text-align:center;cursor:pointer;transition:all .22s;}
 .ncard:hover{border-color:var(--a);transform:translateY(-3px);box-shadow:0 6px 20px rgba(88,166,255,.15);}
-.ncard .nc-icon{font-size:28px;margin-bottom:8px;}
-.ncard .nc-name{font-weight:700;font-size:13px;margin-bottom:3px;}
-.ncard .nc-sub{font-size:11px;color:var(--tm);}
+.ncard .nc-icon{font-size:32px;margin-bottom:10px;}
+.ncard .nc-name{font-weight:700;font-size:15px;margin-bottom:4px;}
+.ncard .nc-sub{font-size:13px;color:var(--tm);}
 /* RESPONSIVE */
 @media(max-width:600px){
   table.nt th:nth-child(n+5),table.nt td:nth-child(n+5){display:none;}
@@ -368,6 +368,7 @@ body.mac .mac-flex{display:flex;}
     <button class="tab-btn" onclick="switchTab('params')">📤 看送出參數</button>
     <button class="tab-btn" onclick="switchTab('response')">📥 看回應資料</button>
     <button class="tab-btn" onclick="switchTab('throttle')">🐌 弱網測試</button>
+    <button class="tab-btn" onclick="switchTab('remote')">📲 手機遠端</button>
     <button class="tab-btn" onclick="switchTab('quiz')">🎯 小測驗</button>
   </div>
 </div>
@@ -397,6 +398,7 @@ body.mac .mac-flex{display:flex;}
 <!-- ===== PANELS ===== -->
 <div id="panels" class="section">
   <div class="sh"><div class="si pu">🖥️</div><div class="sh-text"><h2>F12 各分頁介面介紹</h2><p>點任一面板查看詳細說明、介面解析與快捷鍵</p></div></div>
+  <div class="tip ok" style="margin-bottom:18px"><div class="ti">🌟</div><div><strong>小白必讀：三大核心面板</strong><br>先記住這三個最常用的：<strong>Network</strong>（查 API 請求）、<strong>Console</strong>（看 JS 錯誤）、<strong>Elements</strong>（查網頁元素）。其他面板進階再慢慢了解就好！</div></div>
   <div id="panel-grid">
     <!-- Elements -->
     <div class="pc" id="pc-elements" onclick="togglePanel('elements',this)">
@@ -439,8 +441,7 @@ body.mac .mac-flex{display:flex;}
       <div class="pc-mock"><div class="mem-m"><div style="font-size:9px;color:var(--tm);margin-bottom:7px;font-family:'JetBrains Mono',monospace">Heap 快照 · 24.3 MB</div><div class="mem-r"><span class="mem-lbl">JS 物件</span><div class="mem-b"><div class="mem-f" style="width:65%;background:var(--a)"></div></div><span style="color:var(--tm)">15.8M</span></div><div class="mem-r"><span class="mem-lbl">字串</span><div class="mem-b"><div class="mem-f" style="width:20%;background:var(--a2)"></div></div><span style="color:var(--tm)">4.9M</span></div><div class="mem-r"><span class="mem-lbl">陣列</span><div class="mem-b"><div class="mem-f" style="width:14%;background:var(--a5)"></div></div><span style="color:var(--tm)">3.4M</span></div></div></div>
     </div>
   </div><!-- /panel-grid -->
-  <div class="tip"><div class="ti">💡</div><div>對小白來說，<strong>Network</strong>（查 API）、<strong>Console</strong>（看錯誤）、<strong>Elements</strong>（查元素）是最常用的三個面板！</div></div>
-  <button class="rb" onclick="switchTab('open')" style="margin-top:4px">下一步：怎麼打開 →</button>
+  <button class="rb" onclick="switchTab('open')" style="margin-top:18px">下一步：怎麼打開 →</button>
 </div>
 
 <!-- ===== OPEN ===== -->
@@ -809,8 +810,168 @@ body.mac .mac-flex{display:flex;}
     <div class="step"><div class="sdot dn">4</div><h4>重新整理頁面</h4><p id="ts4">按 <span class="kt">F5</span> 觀察載入狀況</p></div>
     <div class="step"><div class="sdot" style="color:var(--a3)">⚠</div><h4 style="color:var(--a3)">測試完記得改回來！</h4><p>把選單改回「No throttling」，否則瀏覽器會一直很慢！</p></div>
   </div>
-  <button class="rb" onclick="switchTab('quiz')">最後：來挑戰小測驗 🎯 →</button>
+  <button class="rb" onclick="switchTab('remote')">下一步：手機遠端除錯 📲 →</button>
 </div>
+
+<!-- ===== REMOTE DEBUG ===== -->
+<div id="remote" class="section">
+  <div class="sh"><div class="si" style="background:rgba(88,166,255,.15)">📲</div><div class="sh-text"><h2>手機遠端除錯</h2><p>用電腦的 Chrome DevTools 查看手機網頁的 API、錯誤、樣式</p></div></div>
+
+  <div class="tip ok" style="margin-bottom:18px"><div class="ti">🎯</div><div><strong>這個功能超實用！</strong><br>手機網頁有問題卻不知道怎麼查？把手機接上電腦，就能用電腦的 F12 查看手機上正在瀏覽的網頁，完整的 Network、Console、Elements 全都有！</div></div>
+
+  <!-- Android Section -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <div style="width:3px;height:26px;background:var(--a2);border-radius:2px"></div>
+      <div style="font-size:1.1rem;font-weight:900">🤖 Android 手機（最推薦，最完整）</div>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <div class="card-title">⚙️ 第一步：開啟手機「開發者選項」</div>
+      <p>只需設定一次，以後就不用再設了。</p>
+      <div class="steps" style="margin-top:12px">
+        <div class="step"><div class="sdot dn">1</div><h4>進入手機「設定」</h4><p>找到「關於手機」或「關於裝置」</p></div>
+        <div class="step"><div class="sdot dn">2</div><h4>連點「版本號碼」7 下</h4><p>直到看到提示「你已成為開發人員」，不同品牌位置略有不同</p></div>
+        <div class="step"><div class="sdot dn">3</div><h4>回到設定 → 找到「開發人員選項」</h4><p>Samsung 在「一般管理」→「開發人員選項」；小米在「額外設定」裡</p></div>
+        <div class="step"><div class="sdot dn">4</div><h4>開啟「USB 偵錯」</h4><p>找到「USB 偵錯」開關並打開，彈窗選「確定」</p></div>
+      </div>
+      <div class="tip warn" style="margin-top:4px"><div class="ti">⚠️</div><div>找不到版本號碼？通常在：設定 → 關於手機 → 軟體資訊 → 版本號碼</div></div>
+    </div>
+
+    <div class="card g" style="margin-bottom:14px">
+      <div class="card-title">🔌 第二步：USB 連線到電腦</div>
+      <div class="steps" style="margin-top:10px">
+        <div class="step"><div class="sdot dn">1</div><h4>用 USB 傳輸線連接手機和電腦</h4><p>確認用「資料傳輸」模式，不要只選充電模式</p></div>
+        <div class="step"><div class="sdot dn">2</div><h4>手機上會跳出確認視窗</h4><p>「允許 USB 偵錯？」→ 選「允許」（可勾選永遠允許這台電腦）</p></div>
+        <div class="step"><div class="sdot dn">3</div><h4>確認手機已連上</h4><p>電腦 Chrome 網址列輸入 <span class="kt">chrome://inspect/#devices</span> → 應該能看到你的手機型號出現</p></div>
+      </div>
+    </div>
+
+    <!-- chrome://inspect mockup -->
+    <div style="font-weight:700;margin-bottom:10px;font-size:15px">🖥️ 電腦上的 chrome://inspect 長這樣：</div>
+    <div class="browser">
+      <div class="browser-bar win-flex">
+        <div class="browser-url" style="color:var(--a2)">chrome://inspect/#devices</div>
+        <div class="win-ctrls"><div class="win-btn">─</div><div class="win-btn">□</div><div class="win-btn wclose">✕</div></div>
+      </div>
+      <div class="browser-bar mac-flex">
+        <div class="browser-dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+        <div class="browser-url" style="color:var(--a2)">chrome://inspect/#devices</div>
+      </div>
+      <div style="background:#1e2229;padding:16px;">
+        <!-- Device connected -->
+        <div style="background:#161b22;border:1px solid var(--a2);border-radius:10px;padding:14px 16px;margin-bottom:12px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--a2);flex-shrink:0"></div>
+            <span style="font-weight:700;font-size:14px;color:var(--a2)">Samsung Galaxy S23 — Android 14</span>
+            <span style="font-size:11px;color:var(--tm);margin-left:auto">USB 已連接</span>
+          </div>
+          <!-- Tabs on phone -->
+          <div style="background:#0d1117;border-radius:8px;padding:10px 12px;font-family:'JetBrains Mono',monospace;font-size:12px">
+            <div style="color:var(--tm);font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">手機上開啟的分頁</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd)">
+              <div>
+                <div style="color:var(--tx);margin-bottom:2px">https://shop.example.com/cart</div>
+                <div style="color:var(--tm);font-size:11px">Chrome for Android</div>
+              </div>
+              <div style="display:flex;gap:6px">
+                <div style="background:var(--a);color:var(--bg);border-radius:5px;padding:4px 12px;font-size:11px;font-weight:700;cursor:pointer">inspect</div>
+                <div style="background:var(--sf2);border:1px solid var(--bd);border-radius:5px;padding:4px 10px;font-size:11px;cursor:pointer;color:var(--tm)">reload</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0">
+              <div>
+                <div style="color:var(--tx);margin-bottom:2px">https://news.example.com</div>
+                <div style="color:var(--tm);font-size:11px">Chrome for Android</div>
+              </div>
+              <div style="display:flex;gap:6px">
+                <div style="background:var(--sf2);border:1px solid var(--bd);border-radius:5px;padding:4px 12px;font-size:11px;cursor:pointer;color:var(--tm)">inspect</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tip ok" style="margin:0"><div class="ti">💡</div><div style="font-size:13px">點 <strong style="color:var(--a)">inspect</strong> 後，電腦會打開一個 DevTools 視窗，完全對應到手機那個分頁！Network、Console、Elements 全都可以用。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS Section -->
+  <div style="margin-bottom:28px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <div style="width:3px;height:26px;background:var(--tm);border-radius:2px"></div>
+      <div style="font-size:1.1rem;font-weight:900">🍎 iPhone（需要 Mac + Safari）</div>
+      <span style="background:rgba(255,166,87,.15);border:1px solid rgba(255,166,87,.3);border-radius:99px;padding:2px 10px;font-size:12px;color:var(--a5)">僅限 Mac</span>
+    </div>
+
+    <div class="card o">
+      <div class="card-title">📱 iPhone 設定步驟</div>
+      <div class="steps" style="margin-top:10px">
+        <div class="step"><div class="sdot dn">1</div><h4>iPhone：開啟 Web 檢查器</h4><p>設定 → Safari → 進階 → 打開「Web 檢查器」</p></div>
+        <div class="step"><div class="sdot dn">2</div><h4>iPhone 用 USB 連接 Mac</h4><p>彈出信任提示 → 選「信任」</p></div>
+        <div class="step"><div class="sdot dn">3</div><h4>Mac Safari：開啟開發選單</h4><p>Mac Safari → 偏好設定 → 進階 → 勾選「在選單列顯示開發選單」</p></div>
+        <div class="step"><div class="sdot dn">4</div><h4>Mac Safari 開發選單 → 選你的 iPhone</h4><p>選單列 → 開發 → 你的 iPhone 名稱 → 選擇要除錯的分頁</p></div>
+      </div>
+      <div class="tip warn" style="margin-top:4px"><div class="ti">⚠️</div><div>iOS 遠端除錯只能用 Safari，無法用 Chrome DevTools。Network 功能也比 Android 版少一些。</div></div>
+    </div>
+  </div>
+
+  <!-- What you can do -->
+  <div style="margin-bottom:24px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:3px;height:26px;background:var(--a4);border-radius:2px"></div>
+      <div style="font-size:1.1rem;font-weight:900">🛠️ 連上之後可以做什麼？</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+      <div style="background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:16px">
+        <div style="font-size:22px;margin-bottom:8px">📡</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:5px">查 API 請求</div>
+        <div style="font-size:13px;color:var(--tm)">看手機操作時打了哪些 API、送了什麼參數、收到什麼回應</div>
+      </div>
+      <div style="background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:16px">
+        <div style="font-size:22px;margin-bottom:8px">💻</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:5px">查 JS 錯誤</div>
+        <div style="font-size:13px;color:var(--tm)">Console 顯示手機網頁的錯誤訊息，很多手機版 bug 只有這樣才看得到</div>
+      </div>
+      <div style="background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:16px">
+        <div style="font-size:22px;margin-bottom:8px">🏗️</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:5px">查元素樣式</div>
+        <div style="font-size:13px;color:var(--tm)">Elements 面板顯示手機實際渲染的 HTML/CSS，排版問題一眼看穿</div>
+      </div>
+      <div style="background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:16px">
+        <div style="font-size:22px;margin-bottom:8px">🐌</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:5px">模擬弱網</div>
+        <div style="font-size:13px;color:var(--tm)">連接後同樣可以在電腦設定 Throttling，模擬手機在 4G/3G 下的體驗</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison table -->
+  <div class="card p">
+    <div class="card-title">📊 Android vs iPhone 遠端除錯比較</div>
+    <div style="overflow-x:auto;margin-top:10px">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="border-bottom:1px solid var(--bd)">
+            <th style="text-align:left;padding:8px 12px;color:var(--tm);font-weight:700"></th>
+            <th style="text-align:center;padding:8px 12px;color:var(--a2)">🤖 Android</th>
+            <th style="text-align:center;padding:8px 12px;color:var(--tm)">🍎 iPhone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:9px 12px;color:var(--tm)">需要電腦系統</td><td style="text-align:center;padding:9px 12px">Windows / Mac / Linux ✅</td><td style="text-align:center;padding:9px 12px;color:var(--a5)">僅限 Mac ⚠️</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:9px 12px;color:var(--tm)">使用的工具</td><td style="text-align:center;padding:9px 12px">Chrome DevTools ✅</td><td style="text-align:center;padding:9px 12px;color:var(--tm)">Safari 開發工具</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:9px 12px;color:var(--tm)">Network 面板</td><td style="text-align:center;padding:9px 12px;color:var(--a2)">完整 ✅</td><td style="text-align:center;padding:9px 12px;color:var(--tm)">功能較少</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04)"><td style="padding:9px 12px;color:var(--tm)">Console 面板</td><td style="text-align:center;padding:9px 12px;color:var(--a2)">完整 ✅</td><td style="text-align:center;padding:9px 12px;color:var(--a2)">完整 ✅</td></tr>
+          <tr><td style="padding:9px 12px;color:var(--tm)">設定難度</td><td style="text-align:center;padding:9px 12px">簡單 ⭐⭐</td><td style="text-align:center;padding:9px 12px;color:var(--tm)">稍複雜 ⭐⭐⭐</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="tip" style="margin-top:16px"><div class="ti">💡</div><div>用 Windows 電腦 + Android 手機 是最方便的組合。如果你的手機是 iPhone 且電腦是 Windows，目前沒有官方方式做遠端除錯，建議改用模擬器或借 Mac 設備。</div></div>
+  <button class="rb" onclick="switchTab('quiz')" style="margin-top:14px">最後：來挑戰小測驗 🎯 →</button>
+</div>
+
 
 <!-- ===== QUIZ ===== -->
 <div id="quiz" class="section">
@@ -875,7 +1036,7 @@ function applyOS(os){
 }
 
 /* ===== TABS ===== */
-const TABS=['intro','panels','open','network','params','response','throttle','quiz'];
+const TABS=['intro','panels','open','network','params','response','throttle','remote','quiz'];
 function switchTab(id){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
